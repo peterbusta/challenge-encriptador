@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Colores */
+:root {
+    /* Colores */
+    --muyoscuro: #0A3871;
+    --oscuro: #2C4E91;
+    --medio: #5274B1;
+    --claro: #B3C8F0;
+    --muyclaro: #E1ECFA;
+    /* Fuentes*/
+    --fuente: 'Inter', sans-serif;
+}
+
+/* Estilos generales */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: var(--fuente);
+    background-color: var(--claro);
+    justify-content: center
+}
+
+/* Estilos de encabezado */
+.header {
+    margin-top: 5vh;
+    margin-left: 3vw;
+}
+
+.header_icono {
+    height: 6.5vh;
+}
+
+/* Estilos del contenido principal */
+.contenido {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenido_izquierda, .contenido_derecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2%;
+    height: 90%;
+}
+
+/* Estilos para contenido izquierda */
+.contenido_izquierda {
+    width: 60%;
+}
+
+.contenido_izquierda_textoinicial {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-family: var(--fuente);
+    font-size: 2rem;
+    color: var(--muyoscuro);
+    background-color: var(--muyclaro);
+    height: 80%;
+    width: 90%;
+}
+
+.contenido_izquierda_textoadvertencia {
+    font-family: var(--fuente);
+    font-size: 1rem;
+    color: var(--muyoscuro);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+}
+
+.contenido_izquierda_textoadvertencia_imagen {
+    height: 1rem;
+    padding-right: 0.5rem;
+}
+
+.contenido_izquierda_botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 42rem;
+    margin: 2rem;
+}
+
+.contenido_izquierda_botones_encriptar,
+.contenido_izquierda_botones_desencriptar,
+.contenido_derecha_botones_copiar {
+    font-family: var(--fuente);
+    font-size: 1rem;
+    font-weight: normal;
+    width: 20rem;
+    height: 4rem;
+    border: 1px solid;
+    border-radius: 1.25rem;
+    cursor: pointer;
+}
+
+.contenido_izquierda_botones_encriptar:hover,
+.contenido_izquierda_botones_desencriptar:hover,
+.contenido_derecha_botones_copiar:hover {
+    font-weight: bold;
+    border: 3px solid;
+}
+
+.contenido_izquierda_botones_encriptar {
+    background-color: var(--muyoscuro);
+    border-color: var(--muyoscuro);
+    color: var(--muyclaro);
+}
+
+.contenido_izquierda_botones_encriptar:hover {
+    border-color: var(--muyclaro);
+}
+
+.contenido_izquierda_botones_desencriptar {
+    background-color: var(--muyclaro);
+    border-color: var(--muyclaro);
+    color: var(--muyoscuro);
+}
+
+.contenido_izquierda_botones_desencriptar:hover {
+    border-color: var(--muyoscuro);
+}
+
+/* Estilos para contenido derecha */
+.contenido_derecha {
+    width: 40%;
+    background-color: var(--muyclaro);
+    border-radius: 7%;
+}
+
+.contenido_derecha_textoresultado {
+    border: none;
+    background-color: var(--muyclaro);
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-family: var(--fuente);
+    color: var(--muyoscuro);
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.contenido_derecha_mensajevacio {
+    border: none;
+    background-color: var(--muyclaro);
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido_derecha_mensajevacio_imagen {
+    width: 75%;
+}
+
+.contenido_derecha_mensajevacio_texto {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fuente);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.contenido_derecha_mensajevacio_texto_grande {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--oscuro);
+}
+
+.contenido_derecha_mensajevacio_texto_chico {
+    font-size: 0.66em;
+    font-weight: normal;
+    color: var(--medio);
+}
+
+.contenido_derecha_botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin: 2rem;
+}
+
+.contenido_derecha_botones_copiar {
+    color: var(--muyclaro);
+    background-color: var(--medio);
+    border-color: var(--medio);
+}
+
+.contenido_derecha_botones_copiar:hover {
+    border-color: var(--muyoscuro);
+}
+
+.oculto {
+    display: none;
+}
+
+/* Estilos de pie */
+footer {
+    margin: 1%;
+}
+
+.footer_texto {
+    text-align: center;
+    font: var(--fuente);
+    font-size: 0.9rem;
+    color: var(--muyoscuro);
+}
+
+/* Responsividad */
+@media (max-width: 1250px) {
+
+    .contenido {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contenido_izquierda {
+        height: 60%;
+        width: 100%;
+    }
+
+    .contenido_derecha {
+        height: 40%;
+        width: 90%;
+    }
+
+    .contenido_derecha_mensajevacio{
+        flex-direction: row;
+    }
+
+    .contenido_derecha_mensajevacio_imagen {
+        width: 21%;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .contenido_izquierda_botones {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 9rem;
+        margin: 1rem;
+    }
+
+    .contenido_izquierda_textoinicial, .contenido_derecha_textoresultado {
+        font-size: 3vh;
+    }
+
+    .contenido_derecha_mensajevacio_imagen {
+        display: none;
+    }
+
+}

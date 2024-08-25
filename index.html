@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de textos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img class="header_icono" src="assets/logo.png">
+    </header>
+    <main class="contenido">
+        <!--Dividimos en dos secciones el contenido para facilitar que nos quede acomodado en 2 columnas en la vista desktop: -->
+        <div class="contenido_izquierda">
+            <textarea class="contenido_izquierda_textoinicial" id="texto" maxlength="200" placeholder="Ingrese el texto aquí..."></textarea>
+            <p class="contenido_izquierda_textoadvertencia">
+                <img class="contenido_izquierda_textoadvertencia_imagen" src="assets/advertencia.png">Solamente letras minúsculas y sin acento. Máximo: 200 Caracteres.
+            </p>
+            <div class="contenido_izquierda_botones">
+                <button class="contenido_izquierda_botones_encriptar" onclick="encriptar()">
+                    Encriptar
+                </button>
+                <button class="contenido_izquierda_botones_desencriptar" onclick="desencriptar()">
+                    Desencriptar
+                </button>                
+            </div>
+        </div>
+        <div class="contenido_derecha">
+            <div class="contenido_derecha_mensajevacio" id="mensaje-vacio">
+                <img src="assets/muneco.png" class="contenido_derecha_mensajevacio_imagen" alt="Imagen de advertencia">
+                <div class="contenido_derecha_mensajevacio_texto">
+                    <p class="contenido_derecha_mensajevacio_texto_grande">Ningún mensaje fue encontrado</p>
+                    <p class="contenido_derecha_mensajevacio_texto_chico">Por favor, ingrese un texto válido para encriptar.</p>
+                </div></div>
+            <textarea class="contenido_derecha_textoresultado oculto" id="resultado" readonly></textarea>
+            <div class="contenido_derecha_botones">
+                <button class="contenido_derecha_botones_copiar oculto" id="copiar" onclick="copiarTexto()">Copiar</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="footer_texto">© 2024 Pedro Matías Bustamante</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
